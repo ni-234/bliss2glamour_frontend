@@ -15,7 +15,7 @@ const paramsToUrl = (params: string[]): string => {
 };
 
 const queryToUrl = (query: {
-  [key: string]: string | number | undefined;
+  [key: string]: string | number | boolean | undefined;
 }): string => {
   let url = "?";
   for (const key in query) {

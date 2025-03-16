@@ -205,7 +205,7 @@ export interface Answer {
 
 export interface QuizAnswerJson {
   question_id: number;
-  answer: string[];
+  correct_answer: string[];
 }
 
 export interface CreateQuizRequest {

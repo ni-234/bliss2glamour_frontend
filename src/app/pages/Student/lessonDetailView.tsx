@@ -276,9 +276,7 @@ export default function ViewLesson() {
         {
           loading: "Start Quiz",
           success: () => {
-            setInterval(() => {
-              quizAnswerRefetch();
-            }, 2000);
+            quizAnswerRefetch();
             setQuestions([]);
             setIsSubmit(false);
             return "Succesfully Added Quiz";

@@ -6,7 +6,7 @@ import { SquarePlus, House } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useFetchedQuery } from "@/hooks/use-fetched-query";
-import { UserResponse } from "@/lib/types";
+import { CreateQuizRequest, UserResponse } from "@/lib/types";
 import {
   addQuizFunction,
   getLessonFunction,
@@ -179,26 +179,26 @@ export default function EditLesson() {
     if (!quiz_name || !timeLimit || !lessonId) return;
 
     // Structure the data according to the required format
-    const formattedData = {
+    const formattedData: CreateQuizRequest = {
       name: quiz_name,
       lesson_id: parseInt(lessonId),
       quiz_json: {
         questions: questions.map((question) => ({
           type: question.type,
-          question_id: question.question_id.toString(),
+          question_id: question.question_id,
           question: question.question,
           answers: question.answers.map((answer) => answer.text),
         })),
       },
       quiz_answers: {
         quiz_answers: questions.map((question) => ({
-          question_id: question.question_id.toString(),
+          question_id: question.question_id,
           correct_answer: question.answers
             .filter((answer) => answer.isCorrect)
             .map((answer) => answer.text),
         })),
       },
-      duration: timeLimit,
+      duration: timeLimit as number,
     };
 
     // Add your API submission logic here
