@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "category": "Relaxing Music",
+    "audio": [
+      {
+        "audioName": "Just Relax",
+        "audioPath": "/music/just-relax-11157.mp3"
+      },
+      {
+        "audioName": "Lofi Chill",
+        "audioPath": "/music/lofi-study-calm-peaceful-chill-hop-112191.mp3"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Relaxing Piano Music",
+    "audio": [
+      {
+        "audioName": "Emotional Piano Music",
+        "audioPath": "/music/emotional-piano-music-256262.mp3"
+      },
+      {
+        "audioName": "Relaxing Piano Music",
+        "audioPath": "/music/relaxing-piano-music-259727.mp3"
+      }
+    ]
+  }
+]
